@@ -119,6 +119,7 @@ class Auth extends Component {
         return (
             <div className={classes.Auth}>
                 {authRedirect}
+                <p className={classes.Title}>Please {this.state.isSignUp ? 'Sign up' : 'Log in'}</p>
                 {backendErrorMessage}
                 <form onSubmit={this.submitHandler}>
                     {form}
@@ -126,7 +127,7 @@ class Auth extends Component {
                 </form>
                 <Button
                     clicked={this.switchAuthModeHandler} 
-                    btnType="Danger">SWITCH TO {this.state.isSignUp ? 'SIGNIN' : 'SIGNUP'}</Button>
+                    btnType="Danger">SWITCH TO {this.state.isSignUp ? 'LOGIN' : 'SIGNUP'}</Button>
             </div>
         );
     }
